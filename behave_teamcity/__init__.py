@@ -40,7 +40,8 @@ class TeamcityFormatter(Formatter):
                              duration=str(self.current_scenario.duration), flowId=None)
 
         if self.current_scenario.status == "failed":
-            name = self.current_step.name
+            #name = self.current_step.name
+            name = step_result.name
 
             error_msg = u"Step VERY failed: {}".format(name)
             if self.current_step.table:
